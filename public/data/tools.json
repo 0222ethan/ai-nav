@@ -1,0 +1,65 @@
+{
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "description": "OpenAI 开发的大型语言模型，支持对话和多种任务",
+      "category": "AI 聊天",
+      "website": "https://chat.openai.com",
+      "icon": "",
+      "tags": ["对话", "文案", "编程"],
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "description": "AI 图像生成工具，通过文字描述创建精美图片",
+      "category": "AI 图像",
+      "website": "https://www.midjourney.com",
+      "icon": "",
+      "tags": ["图像", "设计", "艺术"],
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "description": "Anthropic 开发的 AI 助手，擅长分析和写作",
+      "category": "AI 聊天",
+      "website": "https://claude.ai",
+      "icon": "",
+      "tags": ["对话", "分析", "写作"],
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "description": "AI 视频生成和编辑平台",
+      "category": "AI 视频",
+      "website": "https://runwayml.com",
+      "icon": "",
+      "tags": ["视频", "编辑", "生成"],
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "description": "集成在 Notion 中的 AI 写作助手",
+      "category": "AI 写作",
+      "website": "https://notion.so/product/ai",
+      "icon": "",
+      "tags": ["写作", "办公", "效率"],
+      "updatedAt": "2026-03-13"
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "description": "AI 编程助手，实时提供代码建议",
+      "category": "AI 编程",
+      "website": "https://github.com/features/copilot",
+      "icon": "",
+      "tags": ["编程", "代码", "开发"],
+      "updatedAt": "2026-03-13"
+    }
+  ],
+  "lastUpdated": "2026-03-13"
+}

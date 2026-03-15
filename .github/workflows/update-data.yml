@@ -1,0 +1,18 @@
+name: 定时更新 AI 工具数据
+
+on:
+  # 每天凌晨 3 点自动运行
+  schedule:
+    - cron: '0 3 * * *'
+  # 支持手动触发
+  workflow_dispatch:
+
+jobs:
+  notify-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 通知 OpenClaw 运行爬虫
+        run: |
+          curl -X POST https://open.feishu.cn/open-apis/bot/v2/hook/48e613da-f158-4929-89c0-4da417b5d3ec \
+            -H 'Content-Type: application/json' \
+            -d '{"msg_type":"text","content":{"text":"🤖 ai-nav 数据更新任务触发，请运行爬虫更新数据"}}'

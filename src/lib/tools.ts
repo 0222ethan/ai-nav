@@ -6,11 +6,10 @@ import path from 'path'
 const DATA_PATH = path.join(process.cwd(), 'public', 'data', 'tools.json')
 
 export async function getToolsData(): Promise<ToolsData> {
-  // Vercel 部署时使用外部 URL
-  if (process.env.VERCEL || process.env.NEXT_PUBLIC_DATA_URL) {
-    const dataUrl = process.env.NEXT_PUBLIC_DATA_URL || 'https://your-domain.com/data/tools.json'
+  // Vercel 部署时优先使用外部 URL，也可以读取部署后的 public 目录文件
+  if (process.env.NEXT_PUBLIC_DATA_URL) {
     try {
-      const res = await fetch(dataUrl, {
+      const res = await fetch(process.env.NEXT_PUBLIC_DATA_URL, {
         cache: 'no-store',
       })
       if (!res.ok) {
@@ -19,7 +18,6 @@ export async function getToolsData(): Promise<ToolsData> {
       return await res.json()
     } catch (error) {
       console.error('Error fetching tools data:', error)
-      return { tools: [], lastUpdated: '' }
     }
   }
 
